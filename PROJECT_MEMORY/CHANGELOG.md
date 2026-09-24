@@ -1,5 +1,24 @@
 # Changelog: Sridurga Packers & Movers
 
+## [1.5.0] - 2026-09-24
+### Added & Fixed
+- **Unified Sticky Navbar Restoration**:
+  - Solved `position: sticky` cancellation by swapping `overflow-x: hidden` with modern `overflow-x: clip` on `html, body` and `<ClientLayoutWrapper>`.
+  - Re-architected `Navbar.tsx` into a single `<header className="sticky top-0 z-50 w-full">` containing both the top announcement bar (which collapses smoothly on scroll) and the sticky navigation body (`bg-white/95 backdrop-blur-md shadow-md`).
+- **Silent Video Autoplay in Gallery on Section Reach**:
+  - Implemented `IntersectionObserver` in `GallerySection.tsx` so all video cards automatically start playing silently (`muted`, `playsInline`, `loop`, `controls={false}`) as soon as the user scrolls into the gallery section.
+  - Interactive modal retained for high-definition playback with audio, seeking, and direct WhatsApp quote enquiry.
+- **Direct Multi-Column Services Grid**:
+  - Displayed all 7 service cards directly in a clean responsive grid without pinned horizontal scroll-jacking.
+  - Emphasized the "EXPLORE FULL DETAILS" button with an energetic gradient, bold lettering, and animated hover arrow.
+
+## [1.4.0] - 2026-09-24
+### Changed
+- **Services Grid Layout**:
+  - Removed pinned horizontal scroll-jacking effect completely per user request.
+  - Rendered all 7 service cards directly in a clean, responsive multi-column grid (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`).
+  - Preserved the prominent, highlighted "EXPLORE FULL DETAILS" primary CTA button with vibrant gradient and animated hover icon, alongside the secondary WhatsApp Quote button on all cards.
+
 ## [1.3.0] - 2026-09-24
 ### Added & Fixed
 - **Scroll-Driven Horizontal Walkthrough for Services**:

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { galleryItems } from '@/data/gallery';
 import { GalleryCategory, GalleryMediaItem } from '@/types/gallery';
 import { SectionHeader } from '@/components/common/SectionHeader';
@@ -20,13 +20,114 @@ import {
 } from 'lucide-react';
 import { generateWhatsAppLink } from '@/lib/whatsapp';
 
+function GalleryVideoCard({
+  item,
+  isSectionInView,
+  onOpenModal,
+}: {
+  item: GalleryMediaItem;
+  isSectionInView: boolean;
+  onOpenModal: () => void;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isSectionInView) {
+      video.muted = true;
+      video.play().catch(() => {
+        // Browser autoplay restriction fallback
+      });
+    } else {
+      video.pause();
+    }
+  }, [isSectionInView]);
+
+  return (
+    <div
+      onClick={onOpenModal}
+      className="group relative rounded-3xl overflow-hidden bg-gradient-to-tr from-slate-950 via-slate-900 to-slate-950 border border-slate-200/80 shadow-sm hover:shadow-2xl hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 h-72 flex flex-col justify-end p-5 cursor-pointer"
+    >
+      {/* Video Element: Auto-plays muted without controllers when reached */}
+      <video
+        ref={videoRef}
+        src={item.src}
+        poster={item.thumbnail}
+        muted
+        playsInline
+        loop
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+      />
+
+      {/* Subtle Gradient Scrim for crisp text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none" />
+
+      {/* Top Right Live Auto-Playing Badge */}
+      <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold shadow-lg">
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span>LIVE VIDEO</span>
+      </div>
+
+      {/* Tap hint on hover */}
+      <div className="absolute top-4 left-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1 px-2.5 py-1 rounded-full bg-orange-600 text-white text-[10px] font-bold shadow-md">
+        <Maximize2 className="w-3 h-3" />
+        <span>Tap for Audio &amp; Fullscreen</span>
+      </div>
+
+      {/* Bottom Content Metadata */}
+      <div className="relative z-10 space-y-1">
+        <div className="flex items-center gap-2">
+          <span className="text-[10px] uppercase font-bold tracking-wider bg-orange-600 text-white px-2.5 py-0.5 rounded-full">
+            {item.category}
+          </span>
+          <span className="text-[10px] font-semibold text-emerald-400 flex items-center gap-1">
+            <CheckCircle2 className="w-3 h-3" />
+            <span>Verified Field Clip</span>
+          </span>
+        </div>
+
+        <h4 className="text-base font-bold text-white font-heading leading-snug group-hover:text-orange-300 transition-colors">
+          {item.title}
+        </h4>
+
+        <p className="text-xs text-slate-300 line-clamp-1">
+          {item.alt}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export function GallerySection() {
+  const galleryRef = useRef<HTMLElement>(null);
+  const [isSectionInView, setIsSectionInView] = useState(false);
   const [mediaFilter, setMediaFilter] = useState<'all' | 'video' | 'image'>('all');
   const [activeCategory, setActiveCategory] = useState<GalleryCategory>('all');
   const [activeVideoModal, setActiveVideoModal] = useState<GalleryMediaItem | null>(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(false);
   const modalVideoRef = useRef<HTMLVideoElement>(null);
+
+  // IntersectionObserver: Detects when user reaches the Gallery section
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSectionInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (galleryRef.current) {
+      observer.observe(galleryRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const categories: { label: string; value: GalleryCategory }[] = [
     { label: 'All Operations', value: 'all' },
@@ -48,32 +149,18 @@ export function GallerySection() {
   const handleOpenVideo = (item: GalleryMediaItem) => {
     setActiveVideoModal(item);
     setIsPlaying(true);
-    setIsMuted(false);
   };
 
   const handleCloseVideo = () => {
     setActiveVideoModal(null);
   };
 
-  const toggleModalPlay = () => {
-    if (!modalVideoRef.current) return;
-    if (modalVideoRef.current.paused) {
-      modalVideoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      modalVideoRef.current.pause();
-      setIsPlaying(false);
-    }
-  };
-
-  const toggleModalMute = () => {
-    if (!modalVideoRef.current) return;
-    modalVideoRef.current.muted = !modalVideoRef.current.muted;
-    setIsMuted(modalVideoRef.current.muted);
-  };
-
   return (
-    <section id="gallery" className="py-20 bg-[#FAF9F6] border-b border-slate-200/60 overflow-hidden">
+    <section
+      ref={galleryRef}
+      id="gallery"
+      className="py-20 bg-[#FAF9F6] border-b border-slate-200/60 overflow-hidden w-full max-w-full"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Authentic Field Proof"
@@ -145,68 +232,38 @@ export function GallerySection() {
           </div>
         </div>
 
-        {/* Gallery Grid (Displays both live videos and field images) */}
+        {/* Gallery Grid: Videos Auto-Play Silently Without Controllers When Reached */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => {
-            const isVideo = item.type === 'video';
+            if (item.type === 'video') {
+              return (
+                <GalleryVideoCard
+                  key={item.id}
+                  item={item}
+                  isSectionInView={isSectionInView}
+                  onOpenModal={() => handleOpenVideo(item)}
+                />
+              );
+            }
 
             return (
               <div
                 key={item.id}
-                onClick={() => isVideo && handleOpenVideo(item)}
-                className={`group relative rounded-3xl overflow-hidden bg-gradient-to-tr from-slate-950 via-slate-900 to-slate-950 border border-slate-200/80 shadow-sm hover:shadow-2xl transition-all duration-300 h-72 flex flex-col justify-end p-5 ${
-                  isVideo ? 'cursor-pointer hover:border-orange-500/80 hover:-translate-y-1' : ''
-                }`}
+                className="group relative rounded-3xl overflow-hidden bg-gradient-to-tr from-slate-950 via-slate-900 to-slate-950 border border-slate-200/80 shadow-sm hover:shadow-2xl transition-all duration-300 h-72 flex flex-col justify-end p-5"
               >
-                {/* Visual Media Layer */}
-                {isVideo ? (
-                  <>
-                    {/* Video Poster Thumbnail */}
-                    <img
-                      src={item.thumbnail || item.src}
-                      alt={item.alt}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
-                    />
+                <SafeImage
+                  src={item.src}
+                  alt={item.alt}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
+                />
 
-                    {/* Centered Play Button Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <div className="w-16 h-16 rounded-full bg-orange-600/95 text-white flex items-center justify-center shadow-xl shadow-orange-600/50 group-hover:scale-115 group-hover:bg-orange-500 transition-all border-2 border-white/80">
-                        <Play className="w-7 h-7 fill-white text-white ml-1" />
-                      </div>
-                    </div>
-
-                    {/* Top Right Live Video Badge */}
-                    <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                      </span>
-                      <span>WATCH VIDEO</span>
-                    </div>
-                  </>
-                ) : (
-                  <SafeImage
-                    src={item.src}
-                    alt={item.alt}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
-                  />
-                )}
-
-                {/* Dark Gradient Scrim for crisp text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none" />
 
-                {/* Bottom Content Metadata */}
                 <div className="relative z-10 space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] uppercase font-bold tracking-wider bg-orange-600 text-white px-2.5 py-0.5 rounded-full">
                       {item.category}
                     </span>
-                    {isVideo && (
-                      <span className="text-[10px] font-semibold text-emerald-400 flex items-center gap-1">
-                        <CheckCircle2 className="w-3 h-3" />
-                        <span>Verified Field Clip</span>
-                      </span>
-                    )}
                   </div>
 
                   <h4 className="text-base font-bold text-white font-heading leading-snug group-hover:text-orange-300 transition-colors">
@@ -222,7 +279,7 @@ export function GallerySection() {
           })}
         </div>
 
-        {/* Video Player Lightbox Modal */}
+        {/* Video Player Lightbox Modal (For Full Audio & Interactive Controls) */}
         {activeVideoModal && (
           <div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md animate-fadeIn"
@@ -257,7 +314,7 @@ export function GallerySection() {
                 </button>
               </div>
 
-              {/* Video Player */}
+              {/* Video Player in Modal: Plays with sound and full controls */}
               <div className="relative bg-black flex items-center justify-center max-h-[65vh]">
                 <video
                   ref={modalVideoRef}

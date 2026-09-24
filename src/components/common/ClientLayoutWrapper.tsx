@@ -39,7 +39,7 @@ export function ClientLayoutWrapper({ children }: ClientLayoutWrapperProps) {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF9F6] text-slate-900 selection:bg-orange-500 selection:text-white overflow-x-hidden w-full max-w-full relative">
+    <div className="min-h-screen flex flex-col bg-[#FAF9F6] text-slate-900 selection:bg-orange-500 selection:text-white overflow-x-clip w-full max-w-full relative">
       <Navbar onOpenBookingModal={() => setIsModalOpen(true)} />
       <main className="flex-1 w-full">{children}</main>
       <Footer />

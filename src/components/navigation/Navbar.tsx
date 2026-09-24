@@ -29,9 +29,13 @@ export function Navbar({ onOpenBookingModal }: NavbarProps) {
   const whatsappUrl = generateWhatsAppLink();
 
   return (
-    <>
-      {/* Top Notification / Trust Bar */}
-      <div className="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800 transition-all duration-300 w-full max-w-full overflow-hidden">
+    <header className="sticky top-0 z-50 w-full transition-all duration-300 shadow-sm">
+      {/* Top Notification / Trust Bar (Smoothly collapses on scroll to give full screen to navbar) */}
+      <div
+        className={`bg-slate-900 text-slate-200 text-xs px-4 border-b border-slate-800 transition-all duration-300 overflow-hidden ${
+          isScrolled ? 'max-h-0 py-0 opacity-0 pointer-events-none' : 'max-h-14 py-2 opacity-100'
+        }`}
+      >
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1 font-semibold text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-full text-[11px]">
@@ -60,12 +64,11 @@ export function Navbar({ onOpenBookingModal }: NavbarProps) {
         </div>
       </div>
 
-      {/* Main Sticky Navbar */}
-      <header
-        className={`sticky top-0 z-40 transition-all duration-300 w-full max-w-full overflow-hidden ${
-
+      {/* Main Sticky Navbar Body */}
+      <div
+        className={`transition-all duration-300 w-full ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md py-2.5 sm:py-3 border-b border-slate-200/80'
+            ? 'bg-white/95 backdrop-blur-md shadow-md py-2.5 sm:py-3 border-b border-slate-200/90'
             : 'bg-white py-3 sm:py-4 border-b border-slate-100'
         }`}
       >
@@ -191,7 +194,7 @@ export function Navbar({ onOpenBookingModal }: NavbarProps) {
             </div>
           </div>
         )}
-      </header>
-    </>
+      </div>
+    </header>
   );
 }
