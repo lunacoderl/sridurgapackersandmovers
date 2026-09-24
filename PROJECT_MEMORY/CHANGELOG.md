@@ -1,5 +1,29 @@
 # Changelog: Sridurga Packers & Movers
 
+## [1.2.0] - 2026-09-24
+### Added
+- **Official Brand Logo Integration**:
+  - `public/logo.png` integrated into `Navbar.tsx` and `Footer.tsx` enclosed in clean white backing containers to ensure contrast and transparency fidelity.
+  - Browser tab URL icons generated with solid white background: `src/app/icon.png` (512x512), `src/app/apple-icon.png` (512x512), and `public/favicon.ico`.
+  - Declared `icons` metadata in `src/app/layout.tsx`.
+- **Live Field Videos in Gallery**:
+  - Integrated all 8 real WhatsApp video recordings from `public/videos/` into `src/data/gallery.ts` and `src/components/home/GallerySection.tsx`.
+  - Extracted 8 poster thumbnails in `public/videos/thumbnails/` via ffmpeg.
+  - Added Media Type switcher: `All Media`, `?? Live Videos (8)`, and `?? Photos (18)`.
+  - Implemented interactive Lightbox Video Player modal with play/pause, scrub, sound controls, and direct WhatsApp quote inquiry button.
+- **Service Section Left/Right Carousel Motion**:
+  - `src/components/home/ServicesGrid.tsx` equipped with Left (?) and Right (?) directional controls with smooth scrolling and snap alignment.
+  - Added Auto-Slide feature with pause-on-hover.
+  - Added layout view toggle: `Slider Carousel` vs `Grid View`.
+  - Progress dots indicating current card position.
+- **2-Pin Drop GPS Route Map & AP 26 Districts Selector**:
+  - `src/components/common/RouteLocationPicker.tsx` with Leaflet dual pins (Pickup ??, Dropoff ??) and live road distance calculation.
+  - Cascading dropdown of all 26 Andhra Pradesh reorganized districts and major mandals/cities.
+  - Integrated into Quick Booking Modal and Contact Page.
+- **Vercel Deployment & GitHub Remote**:
+  - `vercel.json` configured for Next.js deployment.
+  - Pushed to `https://github.com/lunacoderl/sridurgapackersandmovers.git` on branch `main`.
+
 ## [1.0.0] - 2026-09-24
 ### Added
 - **Core Datasets**:
