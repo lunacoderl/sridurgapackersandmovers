@@ -47,7 +47,7 @@ export default function ContactPage() {
         style={{ backgroundImage: "url('/images/contact-bg.png')" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="max-w-3xl mx-auto p-6 sm:p-10 rounded-3xl backdrop-blur-md bg-slate-950/80 border border-white/10 shadow-2xl space-y-4">
+          <div className="max-w-3xl mx-auto p-6 sm:p-10 rounded-3xl backdrop-md bg-slate-950/80 border border-white/10 shadow-2xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-600/20 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase tracking-wider">
               <Phone className="w-3.5 h-3.5" />
               <span>24/7 Helpline Active</span>
@@ -299,11 +299,10 @@ export default function ContactPage() {
               <button
                 key={tab.value}
                 onClick={() => setSelectedRegion(tab.value)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold tracking-wide transition-all cursor-pointer ${
-                  selectedRegion === tab.value
+                className={`px-4 py-2 rounded-xl text-xs font-bold tracking-wide transition-all cursor-pointer ${selectedRegion === tab.value
                     ? 'bg-slate-900 text-white shadow-md'
                     : 'bg-[#FAF9F6] text-slate-700 hover:bg-slate-200 border border-slate-200'
-                }`}
+                  }`}
               >
                 {tab.label}
               </button>

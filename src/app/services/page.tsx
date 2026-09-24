@@ -34,7 +34,7 @@ export default function ServicesPage() {
         style={{ backgroundImage: "url('/images/services/service-bg.png')" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="max-w-4xl mx-auto p-6 sm:p-10 rounded-3xl backdrop-blur-md bg-slate-950/80 border border-white/10 shadow-2xl space-y-4">
+          <div className="max-w-4xl mx-auto p-6 sm:p-10 rounded-3xl backdrop-md bg-slate-950/80 border border-white/10 shadow-2xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-600/20 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase tracking-wider">
               <Truck className="w-3.5 h-3.5" />
               <span>Comprehensive Solutions</span>

@@ -96,7 +96,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             <span>Back to All Services</span>
           </Link>
 
-          <div className="backdrop-blur-md bg-slate-950/80 p-6 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
+          <div className="backdrop-md bg-slate-950/80 p-6 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               <div className="lg:col-span-8 space-y-5">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-600/20 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase tracking-wider">

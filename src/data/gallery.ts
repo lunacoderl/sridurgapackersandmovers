@@ -2,6 +2,78 @@ import { GalleryMediaItem } from '@/types/gallery';
 
 export const galleryItems: GalleryMediaItem[] = [
   {
+    "id": "vid-01",
+    "title": "Live Container Loading & Securing Inside Truck",
+    "category": "moving",
+    "src": "/videos/WhatsApp Video 2026-09-23 at 06.46.03.mp4",
+    "alt": "Watch our Vizianagaram crew systematically load and strap packed household goods into the closed container",
+    "type": "video",
+    "thumbnail": "/videos/thumbnails/thumb-1.jpg"
+  },
+  {
+    "id": "vid-02",
+    "title": "5-Layer Sofa & Wooden Furniture Wrap in Action",
+    "category": "packing",
+    "src": "/videos/WhatsApp Video 2026-09-23 at 06.46.04.mp4",
+    "alt": "Real field recording of heavy bubble wrap and stretch film applied to wooden living room sets",
+    "type": "video",
+    "thumbnail": "/videos/thumbnails/thumb-2.jpg"
+  },
+  {
+    "id": "vid-03",
+    "title": "Fragile Electronics & LED TV Cushioning",
+    "category": "packing",
+    "src": "/videos/WhatsApp Video 2026-09-23 at 06.46.05 (1).mp4",
+    "alt": "Crew demonstrating shock-absorbent corner guards and multi-layer film wrapping on television",
+    "type": "video",
+    "thumbnail": "/videos/thumbnails/thumb-3.jpg"
+  },
+  {
+    "id": "vid-04",
+    "title": "Doorstep Household Loading at Customer Home",
+    "category": "moving",
+    "src": "/videos/WhatsApp Video 2026-09-23 at 06.46.05 (2).mp4",
+    "alt": "Ground operations showing seamless carrying, stacking, and ramp loading in Vizianagaram",
+    "type": "video",
+    "thumbnail": "/videos/thumbnails/thumb-4.jpg"
+  },
+  {
+    "id": "vid-05",
+    "title": "Two-Wheeler & Motorcycle Fastening in Truck Bay",
+    "category": "vehicles",
+    "src": "/videos/WhatsApp Video 2026-09-23 at 06.46.05.mp4",
+    "alt": "Bike transport security showing padded handle wraps and ratchet tie-downs inside container",
+    "type": "video",
+    "thumbnail": "/videos/thumbnails/thumb-5.jpg"
+  },
+  {
+    "id": "vid-06",
+    "title": "Destination Delivery & Careful Indoor Placement",
+    "category": "team",
+    "src": "/videos/WhatsApp Video 2026-09-23 at 06.46.06.mp4",
+    "alt": "Uniformed staff carrying heavy furniture upstairs and placing it in customer rooms safely",
+    "type": "video",
+    "thumbnail": "/videos/thumbnails/thumb-6.jpg"
+  },
+  {
+    "id": "vid-07",
+    "title": "Precision Stacking of Heavy-Duty Corrugated Cartons",
+    "category": "packing",
+    "src": "/videos/WhatsApp Video 2026-09-23 at 06.46.08 (1).mp4",
+    "alt": "High-density carton arrangement to avoid crushing or movement during transit",
+    "type": "video",
+    "thumbnail": "/videos/thumbnails/thumb-7.jpg"
+  },
+  {
+    "id": "vid-08",
+    "title": "Interstate Container Seal & Dispatch Check",
+    "category": "vehicles",
+    "src": "/videos/WhatsApp Video 2026-09-23 at 06.46.08.mp4",
+    "alt": "Final container locking, GPS tag verification, and dispatch checklist review by supervisor",
+    "type": "video",
+    "thumbnail": "/videos/thumbnails/thumb-8.jpg"
+  },
+  {
     "id": "gal-01",
     "title": "Multi-Layer Furniture & Sofa Protection",
     "category": "packing",

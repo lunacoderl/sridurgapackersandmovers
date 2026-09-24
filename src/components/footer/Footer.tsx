@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
 import { Phone, MessageCircle, Mail, MapPin, Star, ShieldCheck, Clock, Award, ArrowUpRight } from 'lucide-react';
@@ -58,6 +59,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 py-12 border-b border-slate-800">
           {/* Company Column */}
           <div className="lg:col-span-2 space-y-4">
+            <Link href="/" className="inline-block group mb-1">
+              <div className="bg-white p-2 rounded-2xl border border-white/20 shadow-lg inline-flex items-center justify-center group-hover:scale-105 transition-transform">
+                <Image
+                  src="/logo.png"
+                  alt="Sridurga Packers & Movers"
+                  width={150}
+                  height={60}
+                  className="h-10 sm:h-12 w-auto object-contain"
+                />
+              </div>
+            </Link>
             <div className="flex items-center gap-2">
               <span className="text-2xl font-black tracking-tight text-white font-heading">
                 SRIDURGA

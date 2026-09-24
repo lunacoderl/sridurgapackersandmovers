@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -70,8 +71,15 @@ export function Navbar({ onOpenBookingModal }: NavbarProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
-              <Truck className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+            <div className="bg-white p-1 sm:p-1.5 rounded-xl border border-slate-200/90 shadow-sm flex items-center justify-center shrink-0 group-hover:shadow-md transition-shadow">
+              <Image
+                src="/logo.png"
+                alt="Sridurga Packers & Movers Logo"
+                width={120}
+                height={50}
+                className="h-8 sm:h-9 w-auto object-contain"
+                priority
+              />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
