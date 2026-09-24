@@ -33,16 +33,14 @@ export function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Frosted Card for Sharp Text Readability over Clear Fixed Image */}
-          <div className="lg:col-span-7 bg-slate-950/80 backdrop-blur-md p-6 sm:p-10 rounded-3xl border border-white/10 shadow-2xl space-y-6 text-white">
+          <div className="lg:col-span-7 bg-slate-950/80 backdrop-md p-6 sm:p-10 rounded-3xl border border-white/10 shadow-2xl space-y-6 text-white">
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-amber-400 text-xs font-bold shadow-inner">
               <span className="flex items-center gap-1">
                 <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                 <span>4.9 / 5.0 Rating</span>
               </span>
-              <span className="text-slate-500">?</span>
               <span className="text-slate-300">292+ Verified Google Reviews</span>
-              <span className="text-slate-500">?</span>
               <span className="text-orange-400 font-semibold">Vizianagaram Hub</span>
             </div>
 
@@ -100,7 +98,7 @@ export function HeroSection() {
 
           {/* Right Column: High-Conversion Instant WhatsApp Quote Card */}
           <div className="lg:col-span-5">
-            <div className="relative bg-white/95 backdrop-blur-md text-slate-900 p-6 sm:p-8 rounded-3xl shadow-2xl border border-white/30">
+            <div className="relative bg-white/95 backdrop-md text-slate-900 p-6 sm:p-8 rounded-3xl shadow-2xl border border-white/30">
               <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                 <div>
                   <span className="text-[11px] font-black uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-0.5 rounded-full">
