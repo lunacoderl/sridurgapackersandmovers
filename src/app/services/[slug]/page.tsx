@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${service.title} in Vizianagaram | 4.9? Sridurga Movers`,
+    title: `${service.title} in Vizianagaram | 4.9★ Sridurga Movers`,
     description: service.shortDescription,
     keywords: service.seo?.keywords || [
       `${service.title.toLowerCase()} vizianagaram`,

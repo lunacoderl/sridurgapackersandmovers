@@ -18,7 +18,7 @@ export default function TermsPage() {
             Terms &amp; Conditions
           </h1>
           <p className="text-xs text-slate-500 mt-2">
-            Effective Date: January 2026 ? Sridurga Packers &amp; Movers, Vizianagaram
+            Effective Date: January 2026 • Sridurga Packers &amp; Movers, Vizianagaram
           </p>
         </div>
 

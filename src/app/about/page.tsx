@@ -8,7 +8,7 @@ import { generateWhatsAppLink } from '@/lib/whatsapp';
 export const metadata: Metadata = {
   title: 'About Us | 12+ Years of Trusted Moving in Vizianagaram',
   description:
-    'Founded in 2014, Sridurga Packers & Movers is Vizianagaram?s premier household & office relocation company. 4.9? Google rated with 292+ reviews. Learn about our permanent crew and 5-layer packing standard.',
+    "Founded in 2014, Sridurga Packers & Movers is Vizianagaram's premier household & office relocation company. 4.9★ Google rated with 292+ reviews. Learn about our permanent crew and 5-layer packing standard.",
 };
 
 export default function AboutPage() {
@@ -69,7 +69,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              From humble beginnings in Cantonment, Vizianagaram to orchestrating interstate moves across India, discover the standards that made us a 4.9? rated moving company.
+              From humble beginnings in Cantonment, Vizianagaram to orchestrating interstate moves across India, discover the standards that made us a 4.9★ rated moving company.
             </p>
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function AboutPage() {
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">Respect &amp; Courtesy</h4>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                      Our crew members are polite, respectful, and attentive to special instructions regarding pooja items, children?s study desks, and elders? requirements.
+                      Our crew members are polite, respectful, and attentive to special instructions regarding pooja items, children's study desks, and elders' requirements.
                     </p>
                   </div>
                 </div>

@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-xs text-slate-500 mt-2">
-            Last Updated: January 2026 ? Sridurga Packers &amp; Movers, Vizianagaram
+            Last Updated: January 2026 • Sridurga Packers &amp; Movers, Vizianagaram
           </p>
         </div>
 

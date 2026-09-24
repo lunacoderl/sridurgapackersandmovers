@@ -11,7 +11,7 @@ export default function NotFound() {
         </div>
 
         <span className="text-xs font-black uppercase tracking-wider text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
-          Error 404 ? Destination Not Found
+          Error 404 • Destination Not Found
         </span>
 
         <h1 className="text-3xl sm:text-4xl font-black font-heading text-slate-900 tracking-tight">
@@ -19,7 +19,7 @@ export default function NotFound() {
         </h1>
 
         <p className="text-slate-600 text-sm leading-relaxed">
-          The page or route you were looking for doesn?t exist or has moved to a new URL. Let?s get you back on track safely.
+          The page or route you were looking for doesn't exist or has moved to a new URL. Let's get you back on track safely.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">

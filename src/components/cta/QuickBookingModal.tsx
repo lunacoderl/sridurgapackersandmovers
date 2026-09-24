@@ -57,7 +57,7 @@ export function QuickBookingModal({ isOpen, onClose, preselectedService }: Quick
             Get Your Free Moving Quote
           </h3>
           <p className="text-xs text-slate-300 mt-1">
-            Guaranteed upfront pricing ? Zero hidden fees ? Fast WhatsApp reply in 15 mins
+            Guaranteed upfront pricing • Zero hidden fees • Fast WhatsApp reply in 15 mins
           </p>
         </div>
 

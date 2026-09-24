@@ -19,7 +19,7 @@ export function EditorialStory() {
 
             <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
               <p>
-                Founded in Vizianagaram over a decade ago, <strong>Sridurga Packers &amp; Movers</strong> was born out of a simple commitment: treat every customer?s household belongings with the same tenderness, respect, and meticulous security as our own family treasures.
+                Founded in Vizianagaram over a decade ago, <strong>Sridurga Packers &amp; Movers</strong> was born out of a simple commitment: treat every customer's household belongings with the same tenderness, respect, and meticulous security as our own family treasures.
               </p>
               <p>
                 Unlike generic brokers who outsource your items to unknown third-party trucks, Sridurga operates its own in-house trained crew, fleet of all-weather container trucks, and standardized 5-layer industrial packaging protocol. Whether shifting within Cantonment, relocating down Ring Road, or making a corporate move to Hyderabad or Bangalore, you always deal directly with our verified local team.

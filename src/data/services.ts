@@ -53,7 +53,7 @@ export const services: ServiceItem[] = [
     "careDetails": {
       "title": "Why Household Handling Requires Professional Care",
       "description": "Unorganized movers cram furniture without buffering, leading to dents, scratches, and broken heirlooms. Our 10+ years of experience guarantees that every item is wrapped, labeled, and stowed with scientific load distribution.",
-      "image": "/images/services/household/care.webp",
+      "image": "/images/services/service-01.webp",
       "bulletPoints": [
         "Double-corrugated checked cartons for maximum stacking strength",
         "Five-layer furniture padding with corner resistance guards",
@@ -224,7 +224,7 @@ export const services: ServiceItem[] = [
     "careDetails": {
       "title": "Systematic Management of Company Assets",
       "description": "Losing an important document or damaging an employee system costs time and money. Sridurga tracks every office unit with dedicated lot codes so each employee finds their workspace ready at their new desk.",
-      "image": "/images/services/office/care.webp",
+      "image": "/images/services/service-02.webp",
       "bulletPoints": [
         "Desktop systems packed with anonymous cable tags",
         "Anti-static foam for server racks and networking switches",
@@ -347,7 +347,7 @@ export const services: ServiceItem[] = [
     "tagline": "Same-day, quick, and affordable shifting within Vizianagaram & Vizag.",
     "category": "residential",
     "iconName": "Truck",
-    "heroImage": "/images/services/service-03.webp",
+    "heroImage": "/images/services/service-04.webp",
     "shortDescription": "Fast and reliable local relocation with dedicated vehicles for neighborhood-to-neighborhood moves.",
     "fullDescription": "Moving within Vizianagaram or to nearby hubs like Visakhapatnam, Bobbili, or Srikakulam? Our local shifting solution offers fast turnaround, personalized crew, and barrier-free packing to have you settled into your new space in just a few hours.",
     "highlights": [
@@ -391,7 +391,7 @@ export const services: ServiceItem[] = [
     "careDetails": {
       "title": "Fast Local Navigation in Vizianagaram",
       "description": "Our crew knows every corner, alley, and building elevator rule in Vizianagaram. This local familiarity allows us to navigate peak traffic hours easily, arriving on schedule every time.",
-      "image": "/images/services/local/care.webp",
+      "image": "/images/services/service-04.webp",
       "bulletPoints": [
         "Swift small-frame and medium-truck availability",
         "Protective soft wraps for fast same-day loading",
@@ -508,7 +508,7 @@ export const services: ServiceItem[] = [
     "tagline": "Secure, door-to-door long-distance moving across India.",
     "category": "logistics",
     "iconName": "Globe2",
-    "heroImage": "/images/services/service-04.webp",
+    "heroImage": "/images/services/service-07.webp",
     "shortDescription": "Expert long-distance household and corporate shifting from Vizianagaram to Hyderabad, Bangalore, Chennai, Pune, and all major Indian cities.",
     "fullDescription": "Moving to another state or metro requires robust packing standards, experienced long-haul drivers, covered container trucks, and continuous customer updates. Sridurga Packers & Movers provides complete interstate relocation with waterproof packing, dedicated vehicle choices, and safe doorstep delivery.",
     "highlights": [
@@ -552,7 +552,7 @@ export const services: ServiceItem[] = [
     "careDetails": {
       "title": "Heightened Safety for Inter-State Highways",
       "description": "Indian highways subject goods to extended vibrations, sudden stops, and weather shifts. Our domestic packing methodology uses waterproof outer sheets, corner carton reinforcements, and closed container specifications.",
-      "image": "/images/services/domestic/care.webp",
+      "image": "/images/services/service-07.webp",
       "bulletPoints": [
         "All-weather tarpaulin and closed metal containers",
         "Dedicated tie-down ratchets inside vehicles",
@@ -669,7 +669,7 @@ export const services: ServiceItem[] = [
     "tagline": "Multi-layer, high-density protective wrapping for utmost safety.",
     "category": "packing",
     "iconName": "PackageCheck",
-    "heroImage": "/images/services/service-05.webp",
+    "heroImage": "/images/services/service-03.webp",
     "shortDescription": "High-grade bubble wrap, waterproof cartons, corrugated sheets, and corner guards applied by experienced packing masters.",
     "fullDescription": "Almost every moving damage stems from insufficient packing materials or incorrect techniques. Sridurga Packers & Movers provides comprehensive packing and unpacking solutions using only premium, virgin-quality bubble wrap, stretch film, foam rolls, and heavy-duty boxes.",
     "highlights": [
@@ -713,7 +713,7 @@ export const services: ServiceItem[] = [
     "careDetails": {
       "title": "The Sridurga Packing Standard",
       "description": "We do not use thin stretch wrap alone. Every furniture item receives a primary cushioning layer, a secondary shock-absorbing corrugated boundary, and a final moisture-resistant seal.",
-      "image": "/images/services/packing/care.webp",
+      "image": "/images/services/service-03.webp",
       "bulletPoints": [
         "Virgin quality air bubble films (50+ MICRON)",
         "Heavy-duty corrugated boxes with 60+ lb stacking rating",
@@ -871,7 +871,7 @@ export const services: ServiceItem[] = [
     "careDetails": {
       "title": "Ergonomic Precision Saves Your Floors & Walls",
       "description": "Pushing furniture over tiles causes permanent grooves and scratches. Our crew lifts every item off the ground, using soft-rubber wheeled dollies wherever transport is required.",
-      "image": "/images/services/household/care.webp",
+      "image": "/images/services/service-06.webp",
       "bulletPoints": [
         "High-strength neoprene lifting straps",
         "Soft-wheeled floor-protecting dollies",
@@ -974,7 +974,7 @@ export const services: ServiceItem[] = [
     "tagline": "Dedicated, scratch-free bike and car shipping across India.",
     "category": "transport",
     "iconName": "Car",
-    "heroImage": "/images/services/service-07.webp",
+    "heroImage": "/images/services/service-08.webp",
     "shortDescription": "Specialized car carriers and safe two-wheeler wooden/bubble crating for inter-city transit.",
     "fullDescription": "Your car or bike is one of your most valuable personal machines. Sridurga Packers & Movers offers dust-free, scratch-proof vehicle transportation from Vizianagaram to any part of India using enclosed car carriers and firmly braced two-wheeler allocations.",
     "highlights": [
@@ -1018,7 +1018,7 @@ export const services: ServiceItem[] = [
     "careDetails": {
       "title": "Pre-Transit Inspection & Scratch-Free Lashing",
       "description": "We conduct a mutual photographic inspection of your vehicle before it moves. Wheels are secured using ratcheted tie-downs to eliminate any movement or leaning during highway travel.",
-      "image": "/images/services/vehicle/care.webp",
+      "image": "/images/services/service-08.webp",
       "bulletPoints": [
         "Detailed condition report signed before loading",
         "Full multi-layer bubble wrap for bike headlights, tank, and mirrors",
@@ -1121,7 +1121,7 @@ export const services: ServiceItem[] = [
     "tagline": "Clean, 24/7 CCTV-monitored household & commercial storage facilities.",
     "category": "specialized",
     "iconName": "Building2",
-    "heroImage": "/images/services/service-08.webp",
+    "heroImage": "/images/services/service-05.webp",
     "shortDescription": "Flexible short-term and long-term secure warehouse storage in Vizianagaram with dedicated inventory tagging, fire suppression, and moisture-controlled pallets.",
     "fullDescription": "Whether renovating your home, awaiting new house possession, or temporarily relocating for job deputation, Sridurga Packers & Movers provides safe, dry, and round-the-clock secured warehousing in Vizianagaram. Goods are packed with 5-layer protective materials, stored on elevated pallets, and covered by comprehensive transit insurance.",
     "highlights": [
@@ -1155,7 +1155,7 @@ export const services: ServiceItem[] = [
     "careDetails": {
       "title": "Moisture & Security Protocols",
       "description": "All storage items are placed on elevated wooden pallets with silica gel packs to prevent condensation and mildew.",
-      "image": "/images/services/service-08.webp",
+      "image": "/images/services/service-05.webp",
       "bulletPoints": [
         "Elevated palletized storage avoiding floor moisture",
         "Periodic pest control and dust extraction treatments",

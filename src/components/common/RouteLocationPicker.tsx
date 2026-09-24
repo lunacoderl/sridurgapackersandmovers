@@ -164,7 +164,7 @@ export function RouteLocationPicker({
     if (p1) {
       const marker1 = L.marker([p1.lat, p1.lng])
         .addTo(map)
-        .bindPopup('<b>?? Pin 1: Pickup Location</b>')
+        .bindPopup('<b>🟢 Pin 1: Pickup Location</b>')
         .openPopup();
       markersRef.current.push(marker1);
     }
@@ -172,7 +172,7 @@ export function RouteLocationPicker({
     if (p2) {
       const marker2 = L.marker([p2.lat, p2.lng])
         .addTo(map)
-        .bindPopup('<b>?? Pin 2: Drop Location</b>')
+        .bindPopup('<b>🔴 Pin 2: Drop Location</b>')
         .openPopup();
       markersRef.current.push(marker2);
 
@@ -299,7 +299,7 @@ export function RouteLocationPicker({
           }`}
         >
           <Navigation className="w-3.5 h-3.5" />
-          <span>??? Drop 2 Pins On Map</span>
+          <span>📍 Drop 2 Pins On Map</span>
         </button>
       </div>
 
@@ -309,7 +309,7 @@ export function RouteLocationPicker({
           <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
             <span className="font-bold text-slate-800 flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-              Click 1st: Pickup Pin ?? ? Click 2nd: Destination Pin ??
+              Click 1st: Pickup Pin 🟢 • Click 2nd: Destination Pin 🔴
             </span>
 
             <div className="flex items-center gap-2">
@@ -465,7 +465,7 @@ export function RouteLocationPicker({
           <div className="text-[11px] text-slate-500 flex items-center justify-between pt-1">
             <span>Selected Route:</span>
             <span className="font-bold text-orange-600 truncate max-w-[280px]">
-              {movingFrom || 'Vizianagaram'} ? {movingTo || 'Select destination'}
+              {movingFrom || 'Vizianagaram'} → {movingTo || 'Select destination'}
             </span>
           </div>
         </div>

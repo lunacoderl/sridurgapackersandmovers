@@ -19,11 +19,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://sridurgapackers.com'),
   title: {
-    default: 'Sridurga Packers & Movers Vizianagaram | 4.9? Trusted Relocation',
+    default: 'Sridurga Packers & Movers Vizianagaram | 4.9★ Trusted Relocation',
     template: '%s | Sridurga Packers & Movers',
   },
   description:
-    'Vizianagaram?s #1 Packers & Movers since 2014. Rated 4.9? with 292+ Google reviews. Household shifting, office relocation, bike transport & all-India container moves. Call 085001 44488.',
+    "Vizianagaram's #1 Packers & Movers since 2014. Rated 4.9★ with 292+ Google reviews. Household shifting, office relocation, bike transport & all-India container moves. Call 085001 44488.",
   keywords: [
     'packers and movers vizianagaram',
     'sridurga packers and movers',
@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://sridurgapackers.com',
-    title: 'Sridurga Packers & Movers Vizianagaram | 4.9? Rated Relocation',
+    title: 'Sridurga Packers & Movers Vizianagaram | 4.9★ Rated Relocation',
     description:
-      'Zero-damage household & commercial shifting in Vizianagaram, Visakhapatnam & all-India corridors. 12+ years experience. 4.9? Google rating.',
+      'Zero-damage household & commercial shifting in Vizianagaram, Visakhapatnam & all-India corridors. 12+ years experience. 4.9★ Google rating.',
     siteName: 'Sridurga Packers & Movers Vizianagaram',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sridurga Packers & Movers Vizianagaram',
-    description: '4.9? Rated Packers & Movers in Vizianagaram since 2014. 292+ Google Reviews.',
+    description: '4.9★ Rated Packers & Movers in Vizianagaram since 2014. 292+ Google Reviews.',
   },
   robots: {
     index: true,

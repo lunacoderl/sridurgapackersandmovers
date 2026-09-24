@@ -29,7 +29,7 @@ export function Footer() {
               <Star className="w-5 h-5 fill-amber-400" />
             </div>
             <div>
-              <p className="font-bold text-white text-sm">4.9? Google Rating</p>
+              <p className="font-bold text-white text-sm">4.9★ Google Rating</p>
               <p className="text-xs text-slate-400">292+ Real Customer Reviews</p>
             </div>
           </div>
@@ -160,7 +160,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/#reviews" className="text-slate-400 hover:text-orange-400 transition-colors">
-                  Google Reviews (4.9?)
+                  Google Reviews (4.9★)
                 </Link>
               </li>
               <li>

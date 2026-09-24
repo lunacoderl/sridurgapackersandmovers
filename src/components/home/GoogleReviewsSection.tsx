@@ -10,7 +10,7 @@ export function GoogleReviewsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Google Business Profile"
-          title="Rated 4.9? By 292+ Real Customers"
+          title="Rated 4.9★ By 292+ Real Customers"
           highlightedText="On Google Maps"
           subtitle="Explore authentic, unfiltered customer ratings directly from our Google Business Profile in Vizianagaram."
         />

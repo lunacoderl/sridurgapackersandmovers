@@ -54,7 +54,7 @@ export function HeroSection() {
 
             {/* Subheading Narrative */}
             <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-normal">
-              Vizianagaram?s most trusted household shifting and vehicle relocation specialists since 2014.
+              Vizianagaram's most trusted household shifting and vehicle relocation specialists since 2014.
               Industrial 5-layer protective packing, sealed weatherproof container fleet, and guaranteed scratch-free delivery.
             </p>
 
@@ -199,7 +199,7 @@ export function HeroSection() {
                 </button>
 
                 <p className="text-[11px] text-center text-slate-500 pt-1">
-                  ?? No spam. Fast reply from senior moving manager in 10-15 minutes.
+                  🔒 No spam. Fast reply from senior moving manager in 10-15 minutes.
                 </p>
               </form>
             </div>

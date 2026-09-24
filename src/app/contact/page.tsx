@@ -348,7 +348,7 @@ export default function ContactPage() {
                       Key Cities &amp; Mandals Served:
                     </p>
                     <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
-                      {d.cities.slice(0, 6).join(' ? ')}...
+                      {d.cities.slice(0, 6).join(' • ')}...
                     </p>
                   </div>
                 </div>
