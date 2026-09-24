@@ -1,5 +1,19 @@
 # Changelog: Sridurga Packers & Movers
 
+## [1.3.0] - 2026-09-24
+### Added & Fixed
+- **Scroll-Driven Horizontal Walkthrough for Services**:
+  - Pinned `sticky top-0 h-screen` walkthrough container within a calculated vertical scroll track.
+  - Normal top-to-bottom page scrolling from Hero down into Services; once inside, vertical scrolling smoothly translates the service cards horizontally from right to left (`translate3d(-${progress * maxTranslate}px, 0, 0)`).
+  - Normal top-to-bottom page scrolling resumes seamlessly once the services walkthrough completes.
+  - Active step tracker (`Step 01 / 07`) with live percentage progress bar, Left (?) / Right (?) manual arrow buttons, and clickable direct-jump step pills.
+- **Service Cards CTA Highlighting**:
+  - Transformed "EXPLORE FULL DETAILS" into the prominent primary CTA on every service card: vibrant gradient (`from-orange-600 via-orange-500 to-amber-500`), bold uppercase lettering, glowing shadow (`shadow-lg shadow-orange-500/30`), and animated hover arrow.
+- **Mobile Right-Side Whitespace Elimination**:
+  - Enforced strict horizontal overflow clipping on `html, body`, `<ClientLayoutWrapper>`, `<Navbar>`, and `<TrustRibbon>`.
+  - Removed all overflowing negative margins (`-mx-*`) inside bounded containers.
+  - Responsive column wrapping and `min-w-0` truncation preventing horizontal layout blowout on small mobile viewports.
+
 ## [1.2.0] - 2026-09-24
 ### Added
 - **Official Brand Logo Integration**:
