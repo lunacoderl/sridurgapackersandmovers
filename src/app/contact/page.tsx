@@ -5,6 +5,7 @@ import { Phone, MessageCircle, MapPin, Mail, Clock, Send, ShieldCheck, ArrowUpRi
 import { companyData } from '@/data/company';
 import { services } from '@/data/services';
 import { apDistricts, majorInterstateCorridors } from '@/data/apDistricts';
+import { mainServicingLocations } from '@/data/serviceAreas';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { RouteLocationPicker } from '@/components/common/RouteLocationPicker';
 import { generateWhatsAppLink, MoveEnquiryData } from '@/lib/whatsapp';
@@ -243,15 +244,29 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
                   <Phone className="w-6 h-6" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 text-base">Direct Phone Helpline</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Available 24/7 for booking &amp; inquiries</p>
-                  <a
-                    href={`tel:${companyData.phoneRaw}`}
-                    className="inline-block mt-2 font-black text-lg text-orange-600 hover:underline"
-                  >
-                    {companyData.phone}
-                  </a>
+                <div className="flex-1">
+                  <h3 className="font-bold text-slate-900 text-base">Direct Phone Helplines</h3>
+                  <p className="text-xs text-slate-500 mt-0.5">Available 24/7 for booking &amp; emergency moves</p>
+                  <div className="mt-2.5 space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Helpline 1 (Office):</span>
+                      <a
+                        href={`tel:${companyData.phoneRaw}`}
+                        className="font-black text-base text-orange-600 hover:underline"
+                      >
+                        {companyData.phone}
+                      </a>
+                    </div>
+                    <div className="flex items-center justify-between gap-2 pt-1 border-t border-slate-100">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Helpline 2 (Mobile):</span>
+                      <a
+                        href={`tel:${companyData.phone2Raw}`}
+                        className="font-black text-base text-orange-600 hover:underline"
+                      >
+                        {companyData.phone2}
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -274,6 +289,62 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Servicing Locations Showcase */}
+      <section className="py-16 bg-[#FAF9F6] border-b border-slate-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            badge="Local Shifting Hubs"
+            title="Main Servicing Locations"
+            highlightedText="&amp; Express Pickup Corridors"
+            subtitle="Regular daily container dispatches and quick local surveyor visits across all primary towns in our core territory."
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-10">
+            {mainServicingLocations.map((loc) => (
+              <div
+                key={loc.name}
+                className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-orange-400 hover:shadow-md transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-black text-base text-slate-900 font-heading">
+                      {loc.displayName}
+                    </span>
+                    <span className="text-[10px] font-bold bg-orange-50 text-orange-700 px-2 py-0.5 rounded-full">
+                      ~{loc.distanceKm} km
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mb-3">{loc.tagline}</p>
+                  <div className="text-[11px] font-semibold text-emerald-700 flex items-center gap-1 mb-2">
+                    <Clock className="w-3.5 h-3.5" />
+                    <span>Estimated Doorstep Arrival: {loc.pickupTime}</span>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <a
+                    href={`tel:${companyData.phoneRaw}`}
+                    className="inline-flex items-center gap-1 text-slate-700 hover:text-orange-600 font-bold"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-orange-500" />
+                    <span>Call Helpline</span>
+                  </a>
+                  <a
+                    href={generateWhatsAppLink({ movingFrom: loc.name, movingTo: 'Vizianagaram' })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-sm"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5" />
+                    <span>Get Quote</span>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Home, Building2, MapPin, Globe2, Package, Truck, Car, CheckCircle2, ArrowRight, Phone, MessageCircle, ShieldCheck } from 'lucide-react';
+import { Home, Building2, MapPin, Globe2, Package, Truck, Car, CheckCircle2, ArrowRight, Phone, MessageCircle, ShieldCheck, Clock } from 'lucide-react';
 import { services } from '@/data/services';
 import { companyData } from '@/data/company';
+import { mainServicingLocations } from '@/data/serviceAreas';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { SafeImage } from '@/components/common/SafeImage';
 import { generateWhatsAppLink } from '@/lib/whatsapp';
@@ -132,8 +133,64 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Main Servicing Locations */}
+      <section className="py-16 bg-white border-b border-slate-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            badge="Local Shifting Network"
+            title="Main Servicing Locations"
+            highlightedText="&amp; Express Dispatch Corridors"
+            subtitle="Fast doorstep packing and shifting across all 9 primary regional centers connected to Vizianagaram."
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-10">
+            {mainServicingLocations.map((loc) => (
+              <div
+                key={loc.name}
+                className="bg-[#FAF9F6] rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-orange-400 hover:shadow-md transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-black text-base text-slate-900 font-heading">
+                      {loc.displayName}
+                    </span>
+                    <span className="text-[10px] font-bold bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
+                      ~{loc.distanceKm} km
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mb-3">{loc.tagline}</p>
+                  <div className="text-[11px] font-semibold text-emerald-700 flex items-center gap-1 mb-2">
+                    <Clock className="w-3.5 h-3.5" />
+                    <span>Pickup Time: {loc.pickupTime}</span>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs">
+                  <a
+                    href={`tel:${companyData.phoneRaw}`}
+                    className="inline-flex items-center gap-1 text-slate-700 hover:text-orange-600 font-bold"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-orange-500" />
+                    <span>Call Helpline</span>
+                  </a>
+                  <a
+                    href={generateWhatsAppLink({ movingFrom: loc.name, movingTo: 'Vizianagaram' })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-sm"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5" />
+                    <span>Get Quote</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Transparency & Assurance */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#FAF9F6]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <SectionHeader
             badge="Clear &amp; Honest"

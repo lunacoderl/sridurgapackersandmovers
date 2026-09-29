@@ -67,15 +67,25 @@ export function DesktopFloatingCTA({ onOpenBookingModal }: DesktopFloatingCTAPro
           <span>WHATSAPP CHAT</span>
         </a>
 
-        {/* Phone Call Button */}
+        {/* Phone Call Buttons */}
         <a
           href={`tel:${companyData.phoneRaw}`}
-          className="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-100 font-bold text-xs px-3.5 py-2.5 rounded-xl border border-slate-700 transition-all hover:scale-[1.02] whitespace-nowrap"
-          title={`Call ${companyData.phone}`}
-          aria-label="Call helpline"
+          className="flex items-center justify-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-slate-100 font-bold text-xs px-3 py-2 rounded-xl border border-slate-700 transition-all hover:scale-[1.02] whitespace-nowrap"
+          title={`Call Helpline 1: ${companyData.phone}`}
+          aria-label="Call helpline 1"
         >
           <Phone className="w-3.5 h-3.5 text-orange-400 shrink-0" />
           <span>{companyData.phone}</span>
+        </a>
+
+        <a
+          href={`tel:${companyData.phone2Raw}`}
+          className="flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold text-xs px-3 py-2 rounded-xl border border-slate-700/80 transition-all hover:scale-[1.02] whitespace-nowrap"
+          title={`Call Helpline 2: ${companyData.phone2}`}
+          aria-label="Call helpline 2"
+        >
+          <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+          <span>{companyData.phone2}</span>
         </a>
       </div>
     </div>

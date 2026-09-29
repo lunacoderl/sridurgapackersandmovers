@@ -74,24 +74,63 @@ export function HeroSection() {
               </div>
             </div>
 
+            {/* Core Servicing Locations Strip */}
+            <div className="pt-1">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-amber-400 mb-1.5 flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-orange-400 shrink-0" />
+                <span>Servicing Main Locations &amp; Daily Corridors:</span>
+              </p>
+              <div className="flex flex-wrap gap-1.5 text-[11px]">
+                {[
+                  'Parvathipuram',
+                  'Salur',
+                  'Bobbili',
+                  'Cheepurupalli',
+                  'Garividi',
+                  'Rajam',
+                  'S Kota',
+                  'Bhogapuram',
+                  'Thagarapuvalasa',
+                  'Vizianagaram Hub'
+                ].map((town) => (
+                  <span
+                    key={town}
+                    className="bg-slate-900/90 border border-slate-700/80 text-slate-200 px-2.5 py-0.5 rounded-full font-medium"
+                  >
+                    {town}
+                  </span>
+                ))}
+              </div>
+            </div>
+
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
                 href={`tel:${companyData.phoneRaw}`}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-700 hover:to-amber-600 text-white font-black text-sm tracking-wide shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-700 hover:to-amber-600 text-white font-black text-xs sm:text-sm tracking-wide shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all cursor-pointer"
+                title={`Call Primary Helpline: ${companyData.phone}`}
               >
                 <Phone className="w-4 h-4" />
                 <span>CALL: {companyData.phone}</span>
               </a>
 
               <a
+                href={`tel:${companyData.phone2Raw}`}
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-900/90 hover:bg-slate-900 text-white font-black text-xs sm:text-sm tracking-wide border border-slate-700 shadow-xl hover:-translate-y-0.5 transition-all cursor-pointer"
+                title={`Call Mobile Helpline: ${companyData.phone2}`}
+              >
+                <Phone className="w-4 h-4 text-amber-400" />
+                <span>CALL: {companyData.phone2}</span>
+              </a>
+
+              <a
                 href={generateWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm tracking-wide shadow-xl shadow-emerald-600/25 hover:shadow-emerald-600/40 hover:-translate-y-0.5 transition-all"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs sm:text-sm tracking-wide shadow-xl shadow-emerald-600/25 hover:shadow-emerald-600/40 hover:-translate-y-0.5 transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>WHATSAPP ESTIMATE</span>
+                <span>WHATSAPP</span>
               </a>
             </div>
           </div>
@@ -149,6 +188,7 @@ export function HeroSection() {
                     </label>
                     <input
                       type="text"
+                      list="main-locations-list"
                       value={formData.movingFrom}
                       onChange={(e) => setFormData({ ...formData, movingFrom: e.target.value })}
                       placeholder="Vizianagaram"
@@ -161,13 +201,32 @@ export function HeroSection() {
                     </label>
                     <input
                       type="text"
+                      list="main-locations-list"
                       value={formData.movingTo}
                       onChange={(e) => setFormData({ ...formData, movingTo: e.target.value })}
-                      placeholder="Vizag / Hyderabad..."
+                      placeholder="Vizag / Bobbili..."
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-medium focus:ring-2 focus:ring-orange-500 focus:outline-none bg-white"
                     />
                   </div>
                 </div>
+
+                {/* Autocomplete datalist for main servicing locations */}
+                <datalist id="main-locations-list">
+                  <option value="Vizianagaram" />
+                  <option value="Parvathipuram" />
+                  <option value="Salur" />
+                  <option value="Bobbili" />
+                  <option value="Cheepurupalli" />
+                  <option value="Garividi" />
+                  <option value="Rajam" />
+                  <option value="S Kota" />
+                  <option value="Bhogapuram" />
+                  <option value="Thagarapuvalasa" />
+                  <option value="Visakhapatnam (Vizag)" />
+                  <option value="Srikakulam" />
+                  <option value="Hyderabad" />
+                  <option value="Bengaluru" />
+                </datalist>
 
                 <div>
                   <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">

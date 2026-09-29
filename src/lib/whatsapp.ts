@@ -10,6 +10,8 @@ export interface MoveEnquiryData {
 
 export const OFFICIAL_PHONE = '085001 44488';
 export const OFFICIAL_PHONE_CLEAN = '918500144488';
+export const SECONDARY_PHONE = '63031 69738';
+export const SECONDARY_PHONE_CLEAN = '916303169738';
 export const OFFICIAL_WHATSAPP_NUMBER = '918500144488';
 
 export function generateWhatsAppLink(data?: Partial<MoveEnquiryData>): string {

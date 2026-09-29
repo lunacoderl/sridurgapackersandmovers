@@ -12,7 +12,7 @@ export function TrustRibbon() {
     },
     {
       icon: Star,
-      metric: '4.9 ?',
+      metric: '4.9 ★',
       label: '292+ Real Google Reviews',
       color: 'text-amber-500',
       bg: 'bg-amber-50 border-amber-200/60',

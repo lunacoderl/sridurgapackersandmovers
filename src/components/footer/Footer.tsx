@@ -89,7 +89,14 @@ export function Footer() {
                 className="flex items-center gap-3 text-slate-300 hover:text-orange-400 transition-colors font-medium"
               >
                 <Phone className="w-4 h-4 text-orange-400 shrink-0" />
-                <span>Helpline: {companyData.phone}</span>
+                <span>Helpline 1: {companyData.phone}</span>
+              </a>
+              <a
+                href={`tel:${companyData.phone2Raw}`}
+                className="flex items-center gap-3 text-slate-300 hover:text-orange-400 transition-colors font-medium"
+              >
+                <Phone className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Helpline 2: {companyData.phone2}</span>
               </a>
               <a
                 href={whatsappUrl}
@@ -179,13 +186,29 @@ export function Footer() {
           {/* Areas Served Column */}
           <div>
             <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4 font-heading">
-              Vizianagaram Hub &amp; Corridors
+              Vizianagaram Hub &amp; Main Corridors
             </h4>
             <p className="text-xs text-slate-400 mb-3">
-              Same-day shifting available across all local sectors &amp; intercity routes:
+              Daily scheduled pickups across primary towns &amp; intercity routes:
             </p>
             <div className="flex flex-wrap gap-1.5">
-              {['Cantonment', 'Ring Road', 'Collectorate', 'Phool Baugh', 'Balaji Nagar', 'Kothavalasa', 'Bobbili', 'Visakhapatnam', 'Srikakulam', 'Hyderabad', 'Bengaluru'].map((area) => (
+              {[
+                'Parvathipuram',
+                'Salur',
+                'Bobbili',
+                'Cheepurupalli',
+                'Garividi',
+                'Rajam',
+                'S Kota',
+                'Bhogapuram',
+                'Thagarapuvalasa',
+                'Vizianagaram Town',
+                'Cantonment',
+                'Visakhapatnam',
+                'Srikakulam',
+                'Hyderabad',
+                'Bengaluru'
+              ].map((area) => (
                 <span
                   key={area}
                   className="text-[11px] bg-slate-900 border border-slate-800 px-2 py-1 rounded text-slate-300 hover:border-slate-700"
@@ -210,7 +233,7 @@ export function Footer() {
 
         {/* Bottom Legal & Copyright Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>? {new Date().getFullYear()} Sridurga Packers &amp; Movers. All Rights Reserved. Reg. Vizianagaram, AP.</p>
+          <p>© {new Date().getFullYear()} Sridurga Packers &amp; Movers. All Rights Reserved. Reg. Vizianagaram, AP.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-slate-400 transition-colors">
               Privacy Policy

@@ -44,17 +44,26 @@ export function Navbar({ onOpenBookingModal }: NavbarProps) {
             </span>
           </div>
 
-          <div className="flex items-center gap-2.5 sm:gap-4 text-xs font-semibold ml-auto shrink-0">
-            <span className="text-emerald-400 hidden md:flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 text-xs font-semibold ml-auto shrink-0">
+            <span className="text-emerald-400 hidden lg:flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              24/7 Active Helpline
+              24/7 Helplines:
             </span>
             <a
               href={`tel:${companyData.phoneRaw}`}
               className="text-white font-extrabold hover:text-orange-400 transition-colors flex items-center gap-1.5 text-xs bg-slate-800/80 hover:bg-slate-800 px-2 sm:px-2.5 py-1 rounded-lg border border-slate-700/60"
+              title={`Call Primary Helpline: ${companyData.phone}`}
             >
               <Phone className="w-3 h-3 text-orange-400 fill-orange-400" />
               <span>{companyData.phone}</span>
+            </a>
+            <a
+              href={`tel:${companyData.phone2Raw}`}
+              className="text-white font-extrabold hover:text-orange-400 transition-colors flex items-center gap-1.5 text-xs bg-slate-800/80 hover:bg-slate-800 px-2 sm:px-2.5 py-1 rounded-lg border border-slate-700/60"
+              title={`Call Mobile Helpline: ${companyData.phone2}`}
+            >
+              <Phone className="w-3 h-3 text-amber-400 fill-amber-400" />
+              <span>{companyData.phone2}</span>
             </a>
           </div>
         </div>
@@ -117,14 +126,23 @@ export function Navbar({ onOpenBookingModal }: NavbarProps) {
           </nav>
 
           {/* Quick Action Buttons for Desktop & Laptop */}
-          <div className="hidden lg:flex items-center gap-1.5 xl:gap-2.5 shrink-0">
+          <div className="hidden lg:flex items-center gap-1.5 xl:gap-2 shrink-0">
             <a
               href={`tel:${companyData.phoneRaw}`}
               className="inline-flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 text-xs font-bold text-slate-800 bg-slate-100 hover:bg-slate-200 rounded-xl transition-all border border-slate-200 shadow-sm shrink-0"
-              title={`Call Helpline: ${companyData.phone}`}
+              title={`Call Primary Helpline: ${companyData.phone}`}
             >
               <Phone className="w-3.5 h-3.5 text-orange-600 fill-orange-600 shrink-0" />
               <span className="hidden xl:inline">{companyData.phone}</span>
+            </a>
+
+            <a
+              href={`tel:${companyData.phone2Raw}`}
+              className="inline-flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 text-xs font-bold text-slate-800 bg-slate-100 hover:bg-slate-200 rounded-xl transition-all border border-slate-200 shadow-sm shrink-0"
+              title={`Call Mobile Helpline: ${companyData.phone2}`}
+            >
+              <Phone className="w-3.5 h-3.5 text-amber-600 fill-amber-600 shrink-0" />
+              <span className="hidden xl:inline">{companyData.phone2}</span>
             </a>
 
             <button
@@ -177,7 +195,14 @@ export function Navbar({ onOpenBookingModal }: NavbarProps) {
                 className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900 text-white font-bold text-sm shadow-md"
               >
                 <Phone className="w-4 h-4 text-orange-400" />
-                Call Helpline: {companyData.phone}
+                Call Helpline 1: {companyData.phone}
+              </a>
+              <a
+                href={`tel:${companyData.phone2Raw}`}
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-800 text-white font-bold text-sm shadow-md"
+              >
+                <Phone className="w-4 h-4 text-amber-400" />
+                Call Helpline 2: {companyData.phone2}
               </a>
               <a
                 href={whatsappUrl}

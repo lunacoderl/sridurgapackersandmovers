@@ -1,5 +1,16 @@
 # Changelog: Sridurga Packers & Movers
 
+## [1.6.0] - 2026-09-29
+### Added & Updated
+- **Secondary Mobile Number (`63031 69738` / `6303169738`)**:
+  - Added across `companyData`, `types/company`, `schema.org` LocalBusiness JSON-LD, `whatsapp.ts` constants, Navbar sticky announcement & desktop action cluster, mobile drawer, HeroSection action buttons, Desktop floating CTA cluster, Final CTA section, About page, and Contact page.
+- **Main Servicing Locations Showcase**:
+  - Integrated 9 primary servicing locations: Parvathipuram, Salur, Bobbili, Cheepurupalli, Garividi, Rajam, S Kota, Bhogapuram, and Thagarapuvalasa.
+  - Added dedicated showcase grid in `ServiceAreasSection.tsx` with distances, express arrival estimates, and one-tap quote/call buttons.
+  - Featured in `HeroSection.tsx` marquee strip and route datalist autocomplete.
+  - Featured in `src/app/services/page.tsx` and `src/app/contact/page.tsx`.
+  - Added to `Footer.tsx` corridor links and SEO keywords in `src/app/layout.tsx`.
+
 ## [1.5.0] - 2026-09-24
 ### Added & Fixed
 - **Unified Sticky Navbar Restoration**:

@@ -222,10 +222,19 @@ export default function AboutPage() {
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <a
               href={`tel:${companyData.phoneRaw}`}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider shadow-md"
+              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider shadow-md"
+              title={`Call Helpline 1: ${companyData.phone}`}
             >
               <Phone className="w-4 h-4 text-orange-400" />
-              <span>Call Helpline: {companyData.phone}</span>
+              <span>Call: {companyData.phone}</span>
+            </a>
+            <a
+              href={`tel:${companyData.phone2Raw}`}
+              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider shadow-md"
+              title={`Call Helpline 2: ${companyData.phone2}`}
+            >
+              <Phone className="w-4 h-4 text-amber-400" />
+              <span>Call: {companyData.phone2}</span>
             </a>
             <a
               href={whatsappUrl}

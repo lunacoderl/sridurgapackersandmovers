@@ -34,20 +34,30 @@ export function FinalCtaSection() {
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
           <a
             href={`tel:${companyData.phoneRaw}`}
-            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-700 hover:to-amber-600 text-white font-black text-sm tracking-wide shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105 transition-all cursor-pointer"
+            className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-700 hover:to-amber-600 text-white font-black text-xs sm:text-sm tracking-wide shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105 transition-all cursor-pointer"
+            title={`Call Helpline 1: ${companyData.phone}`}
           >
             <Phone className="w-4 h-4" />
-            <span>CALL HELPLINE: {companyData.phone}</span>
+            <span>CALL: {companyData.phone}</span>
+          </a>
+
+          <a
+            href={`tel:${companyData.phone2Raw}`}
+            className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs sm:text-sm tracking-wide border border-slate-700 shadow-xl hover:scale-105 transition-all cursor-pointer"
+            title={`Call Mobile Helpline: ${companyData.phone2}`}
+          >
+            <Phone className="w-4 h-4 text-amber-400" />
+            <span>CALL: {companyData.phone2}</span>
           </a>
 
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm tracking-wide shadow-xl shadow-emerald-600/25 hover:scale-105 transition-all"
+            className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs sm:text-sm tracking-wide shadow-xl shadow-emerald-600/25 hover:scale-105 transition-all"
           >
             <MessageCircle className="w-4 h-4" />
-            <span>WHATSAPP INSTANT ESTIMATE</span>
+            <span>WHATSAPP ESTIMATE</span>
           </a>
         </div>
 
@@ -56,9 +66,9 @@ export function FinalCtaSection() {
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
             Zero Damage Guarantee
           </span>
-          <span>?</span>
-          <span>292+ Real 5? Google Ratings</span>
-          <span>?</span>
+          <span>•</span>
+          <span>292+ Real 5★ Google Ratings</span>
+          <span>•</span>
           <span>Founded in Vizianagaram (Est. 2014)</span>
         </div>
       </div>
