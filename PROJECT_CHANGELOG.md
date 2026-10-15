@@ -16,10 +16,15 @@
 ### Files Created / Modified
 - `src/siteSeo.ts` (created - centralized metadata manifest)
 - `src/app/robots.ts` (modified - bound sitemap to siteSeo.baseUrl)
-- `src/app/sitemap.ts` (modified - bound all sitemap URLs to siteSeo.baseUrl)
+- `src/app/sitemap.ts` (modified - bound all sitemap URLs to siteSeo.baseUrl, added trailing slash to root URL and Google image metadata)
 - `src/app/layout.tsx` (modified - updated metadataBase and openGraph URL)
 - `src/lib/schema.ts` (modified - updated schema image and URL)
 - `src/app/services/[slug]/page.tsx` (modified - updated openGraph and breadcrumb URLs)
 - `src/app/not-found.tsx` (modified - added noindex robots metadata)
 - `.gitignore` (modified - added video exclusions)
-- `PROJECT_CHANGELOG.md` (created - persistent changelog)
+- `PROJECT_CHANGELOG.md` (updated - persistent changelog)
+
+## [2026-10-15 Update] - GSC Sitemap Readability & Image Metadata Fix
+- Fixed root URL in `src/app/sitemap.ts` to include trailing slash (`${baseUrl}/`) to eliminate normalization redirects in GSC.
+- Added `<image:image>` metadata for brand logo and all 8 individual service hero images in `src/app/sitemap.ts` for Google Image indexation.
+

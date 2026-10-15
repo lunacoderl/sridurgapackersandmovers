@@ -8,22 +8,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}`,
+      url: `${baseUrl}/`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1.0,
+      images: [`${baseUrl}/logo.png`],
     },
     {
       url: `${baseUrl}/about`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
+      images: [`${baseUrl}/logo.png`],
     },
     {
       url: `${baseUrl}/services`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
+      images: [`${baseUrl}/logo.png`],
     },
     {
       url: `${baseUrl}/contact`,
@@ -50,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: currentDate,
     changeFrequency: 'weekly',
     priority: 0.85,
+    images: service.heroImage ? [`${baseUrl}${service.heroImage}`] : undefined,
   }));
 
   return [...staticRoutes, ...serviceRoutes];
