@@ -3,9 +3,9 @@ export function getLocalBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'MovingCompany',
     name: 'Sridurga Packers & Movers',
-    image: 'https://sridurgapackers.com/images/hero/sridurga-hero-truck.webp',
+    image: 'https://www.sridurgapackersmovers.com/images/hero/sridurga-hero-truck.webp',
     telephone: ['+91-8500144488', '+91-6303169738'],
-    url: 'https://sridurgapackers.com',
+    url: 'https://www.sridurgapackersmovers.com',
     priceRange: '₹₹',
     address: {
       '@type': 'PostalAddress',

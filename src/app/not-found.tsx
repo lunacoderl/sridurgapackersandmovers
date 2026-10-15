@@ -1,6 +1,15 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Truck, Home, Phone, ArrowLeft } from 'lucide-react';
 import { companyData } from '@/data/company';
+
+export const metadata: Metadata = {
+  title: 'Page Not Found | Sridurga Packers & Movers',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (

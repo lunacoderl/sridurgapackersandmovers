@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next';
 import { services } from '@/data/services';
+import { siteSeo } from '@/siteSeo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sridurgapackers.com';
+  const baseUrl = siteSeo.baseUrl;
   const currentDate = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [

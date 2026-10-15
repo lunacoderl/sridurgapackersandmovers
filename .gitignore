@@ -41,3 +41,8 @@ ehthumbs.db
 *.ntvs*
 *.njsproj
 *.sln
+
+# Large Media Files
+*.mp4
+*.mov
+

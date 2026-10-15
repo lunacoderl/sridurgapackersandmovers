@@ -9,6 +9,7 @@ import { FaqAccordion } from '@/components/common/FaqAccordion';
 import { generateWhatsAppLink } from '@/lib/whatsapp';
 import { getBreadcrumbSchema } from '@/lib/schema';
 import { SafeImage } from '@/components/common/SafeImage';
+import { siteSeo } from '@/siteSeo';
 
 const iconMap: Record<string, React.ElementType> = {
   Home,
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${service.title} | Sridurga Packers & Movers Vizianagaram`,
       description: service.shortDescription,
-      url: `https://sridurgapackers.com/services/${service.slug}`,
+      url: `${siteSeo.baseUrl}/services/${service.slug}`,
     },
   };
 }
@@ -70,9 +71,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   const relatedServices = services.filter((s) => s.slug !== service.slug).slice(0, 3);
 
   const breadcrumbs = getBreadcrumbSchema([
-    { name: 'Home', url: 'https://sridurgapackers.com' },
-    { name: 'Services', url: 'https://sridurgapackers.com/services' },
-    { name: service.title, url: `https://sridurgapackers.com/services/${service.slug}` },
+    { name: 'Home', url: siteSeo.baseUrl },
+    { name: 'Services', url: `${siteSeo.baseUrl}/services` },
+    { name: service.title, url: `${siteSeo.baseUrl}/services/${service.slug}` },
   ]);
 
   return (

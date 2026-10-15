@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { siteSeo } from '@/siteSeo';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://sridurgapackers.com/sitemap.xml',
+    sitemap: `${siteSeo.baseUrl}/sitemap.xml`,
   };
 }

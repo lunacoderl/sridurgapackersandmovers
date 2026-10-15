@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sridurgapackers.com'),
+  metadataBase: new URL('https://www.sridurgapackersmovers.com'),
   title: {
     default: 'Sridurga Packers & Movers Vizianagaram | 4.9★ Trusted Relocation',
     template: '%s | Sridurga Packers & Movers',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://sridurgapackers.com',
+    url: 'https://www.sridurgapackersmovers.com',
     title: 'Sridurga Packers & Movers Vizianagaram | 4.9★ Rated Relocation',
     description:
       'Zero-damage household & commercial shifting in Vizianagaram, Visakhapatnam & all-India corridors. 12+ years experience. 4.9★ Google rating.',
